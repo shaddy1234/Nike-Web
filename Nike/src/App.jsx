@@ -1,4 +1,5 @@
-import { Nav } from "./components";
+import { Nav } from "./Components";
+
 import {
   CustomerReviews,
   Footer,
