@@ -1,53 +1,127 @@
 @import "tailwindcss";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+@layer base {
+  /* Apply custom font families */
+  body {
+    font-family: var(--font-family-montserrat);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-palanquin);
+  }
+}
+
+:root {
+  /* Customize padding */
+  --padding-sm: 8px;
+  --padding-lg: 16px;
+  --padding-xl: 24px;
+
+  /* Customize font sizes */
+  --font-size-xs: 12px;
+  --line-height-xs: 16px;
+
+  --font-size-sm: 14px;
+  --line-height-sm: 20px;
+
+  --font-size-base: 16px;
+  --line-height-base: 19.5px;
+
+  --font-size-lg: 18px;
+  --line-height-lg: 21.94px;
+
+  --font-size-xl: 20px;
+  --line-height-xl: 24.38px;
+
+  --font-size-2xl: 24px;
+  --line-height-2xl: 29.26px;
+
+  --font-size-3xl: 28px;
+  --line-height-3xl: 50px;
+
+  --font-size-4xl: 48px;
+  --line-height-4xl: 58px;
+
+  --font-size-8xl: 96px;
+  --line-height-8xl: 106px;
+
+  /* Customize font families */
+  --font-family-palanquin: 'Palanquin', sans-serif;
+  --font-family-montserrat: 'Montserrat', sans-serif;
+
+  /* Customize colors */
+  --color-primary: #ECEEFF;
+  --color-coral-red: #FF6452;
+  --color-slate-500: #6D6D6D;
+  --color-pale-blue: #F5F6FF;
+  --color-white-400: rgba(255, 255, 255, 0.80);
+
+  /* Customize box shadow */
+  --box-shadow-3xl: 0 10px 40px rgba(0, 0, 0, 0.1);
+
+  /* Customize background images */
+  --background-image-hero: url('assets/images/collection-background.svg');
+  --background-image-card: url('assets/images/thumbnail-background.svg');
+
+  /* Customize screens */
+  --screen-wide: 1440px;
 }
 
 @layer components {
-  .max-container {
-    max-width: 1440px;
-    margin: 0 auto;
-  }
-
   .input {
-    @apply sm:flex-1 max-sm:w-full text-base leading-normal text-slate-500 pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-slate-500 max-sm:rounded-full;
+    @apply text-base leading-normal text-slate-500 outline-none;
+
+    /* Small screens */
+    @apply max-sm:w-full max-sm:p-5 max-sm:border max-sm:border-slate-500 max-sm:rounded-full;
+
+    /* Larger screens */
+    @apply sm:flex-1 sm:border-none pl-5;
   }
 }
 
 @layer utilities {
+  /* Apply custom utilities */
+  .shadow-3xl {
+    box-shadow: var(--box-shadow-3xl);
+  }
+
+  .bg-hero {
+    background-image: var(--background-image-hero);
+  }
+
+  .bg-card {
+    background-image: var(--background-image-card);
+  }
+
   .padding {
-    @apply sm:px-16 px-8 sm:py-24 py-12;
+    @apply sm:px-[var(--padding-lg)] px-[var(--padding-sm)] sm:py-[var(--padding-xl)] py-[var(--padding-lg)];
   }
 
   .padding-x {
-    @apply sm:px-16 px-8;
+    @apply sm:px-[var(--padding-lg)] px-[var(--padding-sm)];
   }
 
   .padding-y {
-    @apply sm:py-24 py-12;
+    @apply sm:py-[var(--padding-xl)] py-[var(--padding-lg)];
   }
 
   .padding-l {
-    @apply sm:pl-16 pl-8;
+    @apply sm:pl-[var(--padding-lg)] pl-[var(--padding-sm)];
   }
 
   .padding-r {
-    @apply sm:pr-16 pr-8;
+    @apply sm:pr-[var(--padding-lg)] pr-[var(--padding-sm)];
   }
 
   .padding-t {
-    @apply sm:pt-24 pt-12;
+    @apply sm:pt-[var(--padding-xl)] pt-[var(--padding-lg)];
   }
 
   .padding-b {
-    @apply sm:pb-24 pb-12;
+    @apply sm:pb-[var(--padding-xl)] pb-[var(--padding-lg)];
   }
 
   .info-text {
-    @apply  text-slate-500 text-lg leading-7;
+    @apply text-slate-500 text-lg leading-7;
   }
 }
