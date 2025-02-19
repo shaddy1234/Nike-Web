@@ -7,8 +7,9 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="padding-x py-8 absolute z-10 w-full bg-white shadow-md">
-      <nav className="flex justify-between items-center max-container">
+    // <header className="padding-x py-8 absolute z-10 w-full bg-white shadow-md">
+    <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
+      <nav className="padding-x py-8 flex justify-between items-center max-container">
         <a href="/">
           <img
             src={headerLogo}
@@ -25,7 +26,7 @@ const Nav = () => {
             <li key={item.label}>
               <a
                 href={item.href}
-                className="font-montserrat leading-normal text-lg text-slate-500"
+                className="font-montserrat text-lg text-slate-500 px-4 py-2 rounded-full transition-all ease-in-out duration-500 hover:bg-[#3326e0] hover:text-white"
               >
                 {item.label}
               </a>
