@@ -14,7 +14,7 @@ const App = () => {
   return (
     <main className="relative">
       <Nav />
-      <section className="xl:pl-8 wide:pr-8 pb-4">
+      <section className="px-4 py-10 md:px-8 md:py-16 lg:px-16 lg:py-20">
         <Hero />
       </section>
       <section className="p-6 sm:p-8">
