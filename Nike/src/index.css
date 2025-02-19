@@ -78,43 +78,14 @@
     @apply sm:flex-1 sm:border-none pl-5;
   }
 }
+
 @layer utilities {
+  /* Custom Text Color */
   .text-coral-red {
     color: var(--color-coral-red);
   }
-}
-@layer utilities {
-  .padding {
-    padding: var(--padding-lg);
-  }
 
-  .padding-x {
-    padding-left: var(--padding-lg);
-    padding-right: var(--padding-lg);
-  }
-
-  .padding-y {
-    padding-top: var(--padding-lg);
-    padding-bottom: var(--padding-lg);
-  }
-}
-
-
-@layer utilities {
-  /* Apply custom utilities */
-  .shadow-3xl {
-    box-shadow: var(--box-shadow-3xl);
-  }
-
-  .bg-hero {
-    background-image: var(--background-image-hero);
-  }
-
-  .bg-card {
-    background-image: var(--background-image-card);
-  }
-
-  /* Fix padding utilities */
+  /* Padding Utilities */
   .padding {
     padding: var(--padding-lg);
   }
@@ -145,6 +116,21 @@
     padding-bottom: var(--padding-xl);
   }
 
+  /* Shadows */
+  .shadow-3xl {
+    box-shadow: var(--box-shadow-3xl);
+  }
+
+  /* Background Images */
+  .bg-hero {
+    background-image: var(--background-image-hero);
+  }
+
+  .bg-card {
+    background-image: var(--background-image-card);
+  }
+
+  /* Custom Text Styles */
   .info-text {
     @apply text-slate-500 text-lg leading-7;
   }
