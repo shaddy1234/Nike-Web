@@ -12,30 +12,30 @@ import {
 
 const App = () => {
   return (
-    <main className='relative'>
+    <main className="relative">
       <Nav />
-      <section className='xl:padding-l wide:padding-r padding-b'>
+      <section className="xl:pl-8 wide:pr-8 pb-4">
         <Hero />
       </section>
-      <section className='padding'>
+      <section className="p-6 sm:p-8">
         <PopularProducts />
       </section>
-      <section className='padding'>
+      <section className="p-6 sm:p-8">
         <SuperQuality />
       </section>
-      <section className='padding-x py-10'>
+      <section className="px-6 sm:px-8 py-10">
         <Services />
       </section>
-      <section className='padding'>
+      <section className="p-6 sm:p-8">
         <SpecialOffer />
       </section>
-      <section className='bg-pale-blue padding'>
+      <section className="bg-pale-blue p-6 sm:p-8">
         <CustomerReviews />
       </section>
-      <section className='padding-x sm:py-32 py-16 w-full'>
+      <section className="px-6 sm:px-8 sm:py-32 py-16 w-full">
         <Subscribe />
       </section>
-      <section className=' bg-black padding-x padding-t pb-8'>
+      <section className="bg-black px-6 sm:px-8 pt-8 pb-8">
         <Footer />
       </section>
     </main>
