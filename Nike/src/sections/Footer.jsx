@@ -16,7 +16,7 @@ const Footer = () => {
               className='m-0'
             />
           </a>
-          <p className='mt-6 text-base leading-7 font-montserrat text-white-400 sm:max-w-sm'>
+          <p className='mt-6 text-base leading-7 font-montserrat text-gray-400 sm:max-w-sm'>
             Get shoes ready for the new term at your nearest Nike store. Find
             Your perfect Size In Store. Get Rewards
           </p>
@@ -41,7 +41,7 @@ const Footer = () => {
               <ul>
                 {section.links.map((link) => (
                   <li
-                    className='mt-3 font-montserrat text-base leading-normal text-white-400 hover:text-slate-gray'
+                    className='mt-3 font-montserrat text-base leading-normal text-gray-400 hover:text-slate-gray'
                     key={link.name}
                   >
                     <a href={link.link}>{link.name}</a>
@@ -53,7 +53,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className='flex justify-between text-white-400 mt-24 max-sm:flex-col max-sm:items-center'>
+      <div className='flex justify-between text-gray-400 mt-24 max-sm:flex-col max-sm:items-center'>
         <div className='flex flex-1 justify-start items-center gap-2 font-montserrat cursor-pointer'>
           <img
             src={copyrightSign}
