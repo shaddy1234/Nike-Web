@@ -12,12 +12,12 @@
 }
 
 :root {
-  /* Customize padding */
+  /* Define padding variables */
   --padding-sm: 8px;
   --padding-lg: 16px;
   --padding-xl: 24px;
 
-  /* Customize font sizes */
+  /* Define font sizes */
   --font-size-xs: 12px;
   --line-height-xs: 16px;
 
@@ -45,25 +45,25 @@
   --font-size-8xl: 96px;
   --line-height-8xl: 106px;
 
-  /* Customize font families */
+  /* Define font families */
   --font-family-palanquin: 'Palanquin', sans-serif;
   --font-family-montserrat: 'Montserrat', sans-serif;
 
-  /* Customize colors */
+  /* Define colors */
   --color-primary: #ECEEFF;
-  --color-coral-red: #FF6452;
-  --color-slate-500: #6D6D6D;
+  --color-coral-red: #3326e0;
+  --color-slate-500: #6d6d6d;
   --color-pale-blue: #F5F6FF;
   --color-white-400: rgba(255, 255, 255, 0.80);
 
-  /* Customize box shadow */
+  /* Define box shadow */
   --box-shadow-3xl: 0 10px 40px rgba(0, 0, 0, 0.1);
 
-  /* Customize background images */
+  /* Define background images */
   --background-image-hero: url('assets/images/collection-background.svg');
   --background-image-card: url('assets/images/thumbnail-background.svg');
 
-  /* Customize screens */
+  /* Define screen sizes */
   --screen-wide: 1440px;
 }
 
@@ -78,6 +78,27 @@
     @apply sm:flex-1 sm:border-none pl-5;
   }
 }
+@layer utilities {
+  .text-coral-red {
+    color: var(--color-coral-red);
+  }
+}
+@layer utilities {
+  .padding {
+    padding: var(--padding-lg);
+  }
+
+  .padding-x {
+    padding-left: var(--padding-lg);
+    padding-right: var(--padding-lg);
+  }
+
+  .padding-y {
+    padding-top: var(--padding-lg);
+    padding-bottom: var(--padding-lg);
+  }
+}
+
 
 @layer utilities {
   /* Apply custom utilities */
@@ -93,32 +114,35 @@
     background-image: var(--background-image-card);
   }
 
+  /* Fix padding utilities */
   .padding {
-    @apply sm:px-[var(--padding-lg)] px-[var(--padding-sm)] sm:py-[var(--padding-xl)] py-[var(--padding-lg)];
+    padding: var(--padding-lg);
   }
 
   .padding-x {
-    @apply sm:px-[var(--padding-lg)] px-[var(--padding-sm)];
+    padding-left: var(--padding-lg);
+    padding-right: var(--padding-lg);
   }
 
   .padding-y {
-    @apply sm:py-[var(--padding-xl)] py-[var(--padding-lg)];
+    padding-top: var(--padding-xl);
+    padding-bottom: var(--padding-xl);
   }
 
   .padding-l {
-    @apply sm:pl-[var(--padding-lg)] pl-[var(--padding-sm)];
+    padding-left: var(--padding-lg);
   }
 
   .padding-r {
-    @apply sm:pr-[var(--padding-lg)] pr-[var(--padding-sm)];
+    padding-right: var(--padding-lg);
   }
 
   .padding-t {
-    @apply sm:pt-[var(--padding-xl)] pt-[var(--padding-lg)];
+    padding-top: var(--padding-xl);
   }
 
   .padding-b {
-    @apply sm:pb-[var(--padding-xl)] pb-[var(--padding-lg)];
+    padding-bottom: var(--padding-xl);
   }
 
   .info-text {
